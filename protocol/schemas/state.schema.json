@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProtocolState",
+  "type": "object",
+  "required": [
+    "time",
+    "possibility_space",
+    "constraints",
+    "admissible_set",
+    "history",
+    "present_state"
+  ],
+  "properties": {
+    "time": {
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "possibility_space": {
+      "type": "object"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "admissible_set": {
+      "type": "object"
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "present_state": {
+      "type": "object"
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "required": [
+        "kind",
+        "timestamp",
+        "payload"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "payload": {
+          "type": "object"
+        },
+        "provenance": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

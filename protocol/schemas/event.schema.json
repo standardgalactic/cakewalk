@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProtocolEvent",
+  "type": "object",
+  "required": [
+    "kind",
+    "timestamp",
+    "payload"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "effect": {
+      "type": "string",
+      "enum": [
+        "refine",
+        "remove",
+        "tag",
+        "select",
+        "refuse",
+        "observe",
+        "merge",
+        "update_constraint"
+      ]
+    },
+    "provenance": {
+      "type": "object"
+    }
+  }
+}

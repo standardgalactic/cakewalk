@@ -1,0 +1,48 @@
+.
+├── README.md
+├── adapters
+│   ├── claude
+│   │   └── README.md
+│   ├── generic-cli
+│   │   └── README.md
+│   └── gpt
+│       └── README.md
+├── agents
+│   ├── constraint-auditor.md
+│   ├── interpreter.md
+│   ├── merge-specialist.md
+│   └── proof-assembler.md
+├── commands
+│   ├── constraint-check.md
+│   ├── history-audit.md
+│   ├── rsvp-map.md
+│   ├── semantic-merge.md
+│   └── theoremize.md
+├── core
+│   ├── constraints.md
+│   ├── irreversibility.md
+│   ├── metrics.md
+│   ├── ontology.md
+│   └── state-model.md
+├── examples
+│   ├── minimal-merge-report.json
+│   ├── minimal-state.json
+│   └── worked-note.md
+├── file-list.txt
+├── mappings
+│   ├── category.md
+│   ├── history.md
+│   ├── merge.md
+│   └── rsvp.md
+├── schemas
+│   ├── event.schema.json
+│   ├── merge-report.schema.json
+│   └── state.schema.json
+└── workflows
+    ├── constraint-analysis.md
+    ├── semantic-merge.md
+    ├── simulation.md
+    ├── theoremization.md
+    └── trajectory-reconstruction.md
+
+12 directories, 34 files

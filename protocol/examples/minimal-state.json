@@ -1,0 +1,44 @@
+{
+  "time": 0,
+  "possibility_space": {
+    "description": "Candidate interpretations of a partially specified artifact",
+    "cardinality_hint": "finite"
+  },
+  "constraints": [
+    {
+      "name": "typing",
+      "kind": "hard"
+    },
+    {
+      "name": "invariant-preservation",
+      "kind": "hard"
+    },
+    {
+      "name": "style-preference",
+      "kind": "soft"
+    }
+  ],
+  "admissible_set": {
+    "description": "Candidates satisfying typing and invariants"
+  },
+  "history": [
+    {
+      "kind": "observe",
+      "timestamp": 0,
+      "payload": {
+        "note": "initial artifact loaded"
+      }
+    }
+  ],
+  "present_state": {
+    "summary": "artifact under analysis"
+  },
+  "invariants": [
+    {
+      "name": "append-only provenance"
+    },
+    {
+      "name": "interface compatibility"
+    }
+  ]
+}

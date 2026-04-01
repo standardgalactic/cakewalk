@@ -1,0 +1,16 @@
+{
+  "shared_backbone": [
+    "Both branches preserve interface X",
+    "Both branches keep invariant Y"
+  ],
+  "shallow_conflicts": [
+    "Different naming for same state variable"
+  ],
+  "deep_conflicts": [
+    "One branch mutates history in place while the other preserves append-only semantics"
+  ],
+  "invariant_drift_risks": [
+    "Loss of provenance if mutable approach is chosen"
+  ],
+  "recommendation": "Preserve append-only trace and normalize naming without adopting in-place history mutation."
+}

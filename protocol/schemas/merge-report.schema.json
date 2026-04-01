@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SemanticMergeReport",
+  "type": "object",
+  "required": [
+    "shared_backbone",
+    "deep_conflicts",
+    "recommendation"
+  ],
+  "properties": {
+    "shared_backbone": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "shallow_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deep_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "invariant_drift_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendation": {
+      "type": "string"
+    },
+    "merged_artifact_summary": {
+      "type": "string"
+    }
+  }
+}

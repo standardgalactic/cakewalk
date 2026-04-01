@@ -2,6 +2,12 @@
 
 UNTESTED
 
+**Protocol Suite**
+
+[Agent Skill Pipeline](https://github.com/standardgalactic/cakewalk/tree/main/protocol/README.md)
+
+[Essay](https://standardgalactic.github.io/cakewalk/Protocol%20Suite.pdf)
+
 **Content engine**
 
 Cakewalk is an autonomous system that discovers source material, transforms it into video, and schedules it for publication over time.
