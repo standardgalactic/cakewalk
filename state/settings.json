@@ -1,0 +1,11 @@
+{
+  "title_prefix": "",
+  "title_suffix": "",
+  "default_visualizer": "static",
+  "default_speed": 1.0,
+  "default_tone": 1.0,
+  "default_publish_days_apart": 1,
+  "default_publish_hour_utc": 15,
+  "default_description_footer": "Generated with Cakewalk.",
+  "default_privacy_status": "private"
+}

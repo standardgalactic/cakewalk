@@ -1,0 +1,5 @@
+PyMuPDF>=1.24.0
+ebooklib>=0.18
+beautifulsoup4>=4.12.0
+google-api-python-client>=2.160.0
+google-auth-oauthlib>=1.2.0

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cakewalk Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Cakewalk</h1>
+      <p>Queue candidates, tune metadata, and prepare scheduled videos.</p>
+    </div>
+    <div class="topbar-actions">
+      <button id="refreshButton">Refresh</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel left-panel">
+      <h2>Candidates</h2>
+      <div id="candidateList" class="candidate-list"></div>
+    </section>
+
+    <section class="panel center-panel">
+      <h2>Editor</h2>
+      <form id="editorForm" class="editor-form hidden">
+        <input type="hidden" id="itemId">
+
+        <label>Title
+          <input id="title" type="text">
+        </label>
+
+        <label>Description
+          <textarea id="description" rows="10"></textarea>
+        </label>
+
+        <div class="row two-up">
+          <label>Visualizer
+            <select id="visualizer">
+              <option value="static">Static subtitles</option>
+              <option value="waveform">Waveform</option>
+              <option value="lissajous">Lissajous preview</option>
+            </select>
+          </label>
+
+          <label>Speed
+            <input id="speed" type="number" step="0.05" min="0.5" max="2.0">
+          </label>
+        </div>
+
+        <div class="row two-up">
+          <label>Tone
+            <input id="tone" type="number" step="0.05" min="0.5" max="2.0">
+          </label>
+
+          <label>Ready to publish
+            <select id="ready">
+              <option value="false">No</option>
+              <option value="true">Yes</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row controls">
+          <button type="submit">Save</button>
+        </div>
+      </form>
+      <div id="emptyEditor" class="placeholder">Select a candidate to edit.</div>
+    </section>
+
+    <section class="panel right-panel">
+      <h2>Preview</h2>
+      <audio id="audioPreview" controls preload="metadata"></audio>
+      <video id="videoPreview" controls preload="metadata"></video>
+      <iframe id="visualPreview" title="Visualizer preview"></iframe>
+      <pre id="metaPreview" class="meta-preview"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

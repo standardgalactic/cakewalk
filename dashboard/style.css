@@ -1,0 +1,96 @@
+:root {
+  --bg: #071107;
+  --panel: #0c190c;
+  --line: #1b5b1b;
+  --text: #baffba;
+  --muted: #79b379;
+  --accent: #8dff8d;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+.topbar h1 { margin: 0 0 0.25rem; }
+.topbar p { margin: 0; color: var(--muted); }
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: calc(100vh - 110px);
+}
+.candidate-list {
+  display: grid;
+  gap: 0.75rem;
+}
+.candidate {
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.candidate.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent) inset;
+}
+.candidate small { color: var(--muted); display: block; margin-top: 0.35rem; }
+.editor-form label {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+input, textarea, select, button {
+  width: 100%;
+  background: #031003;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.65rem;
+  font: inherit;
+}
+button { cursor: pointer; }
+.row.two-up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.hidden { display: none; }
+.placeholder { color: var(--muted); }
+audio, video, iframe {
+  width: 100%;
+  margin-bottom: 0.85rem;
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+video { min-height: 180px; }
+iframe { min-height: 420px; }
+.meta-preview {
+  white-space: pre-wrap;
+  background: #031003;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-height: 120px;
+}
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 1fr; }
+  .panel { min-height: auto; }
+}
